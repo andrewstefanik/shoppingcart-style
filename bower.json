@@ -1,0 +1,22 @@
+{
+  "name": "simple-shop",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Andrew"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/andrewstefanik/shopping-cart",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^5.0.0",
+    "less": "^2.7.1",
+    "jquery": "^3.1.1"
+  }
+}

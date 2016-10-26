@@ -1,0 +1,32 @@
+body {
+    background-color: grey;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.product-list .item {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product-list {
+    list-style: none;
+}
+
+.cart-list .item {
+    background-color: lightblue;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 10px;
+}
+.cart-list {
+    list-style: none;
+}
+/*#total {
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 10px;*/
+/*}*/

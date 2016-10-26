@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Product List</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <h1>Product List</h1>
+        <p>Please browse our selection.</p>
+
+        <ul class="product-list">
+            <% for (var i = 0; i < productList.length; i++) { %>
+            <li>
+                <div class="item">
+                    <a href="cart/add/<%= productList [i].name %>">Add to cart</a>
+                    <br>
+                    <span><strong>Name:</strong><br><%= productList [i].name %></span><br>
+                    <span><strong>Description:</strong><br><%= productList [i].description %></span><br>
+                    <span><strong>Price:$</strong><%= productList [i].price %></span>
+                </div>
+
+            </li>
+            <% } %>
+        </ul>
+    </body>
+</html>

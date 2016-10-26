@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--  allows the browser to scale up the site in mobile view resolutions-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Shop Style Template</title>
+    <!-- styling for the page -->
+
+    <!--  Reset default browser stylings -->
+    <link rel="stylesheet" href="/lib/normalize-css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.less" type="text/less">
+
+    <!-- set options before less.js script -->
+    <script>
+    less = {
+        env: "development",
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: false,
+        rootpath: ":/a.com/"
+    };
+    </script>
+
+    <!--  Include Lesscss as our css precompiler -->
+    <script type="text/javascript"
+    src="/lib/less/dist/less.min.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+</head>
+<body>
+    <!-- A division of the body as the page -->
+    <div class="page">
+        <!-- Header area of the document usually where the site logo  and nav go -->
+        <div class="header">
+            <header>
+                <h1>Aditii</h1>
+                <img src=""/>
+
+            </header>
+            <!-- Build out the top nav bar -->
+            <div class="navbar">
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">Sale</a>
+                    <a href="#">Handbags</a>
+                    <a href="#">Wallets</a>
+                    <a href="#">Accessories</a>
+                    <a href="#">Men's Store</a>
+                    <a href="#">Shoes</a>
+                    <a href="#">Vintage</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+        <!-- Main content of the site -->
+        <div class="body">
+
+            <!--  Image slider -->
+            <div class="slider">
+                <ul>
+                    <li>
+                        <!-- Slider Item -->
+                        <div class="product">
+                            <!-- <img src="/img/shirt.png"/> -->
+                            <div class="description">
+
+                                <h3>Item Name</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <a href="#">Buy Now</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Items 3 columns -->
+            <div class="grid">
+
+                <!-- GRID COLUMN -->
+                <div class="column">
+                    <div class="product">
+                        <img src="/img/shirt.png"/>
+                        <div class="description">
+                            <h3>Item Name</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                            <a href="#">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- GRID COLUMN -->
+                <div class="column">
+                    <div class="product">
+                        <img src="/img/shirt.png"/>
+                        <div class="description">
+                            <h3>Item Name</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <a href="#">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- GRID COLUMN -->
+                <div class="column">
+                    <div class="product">
+                        <img src="/img/shirt.png"/>
+                        <div class="description">
+                            <h3>Item Name</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <a href="#">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- page or document footer -->
+
+        <div class="footer">
+            <div class="grid">
+                <div class="column">
+
+                    <h3>Featured Sale</h3>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                </div>
+                <div class="column">
+
+                    <h3>Featured Sale</h3>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                </div>
+                <div class="column">
+
+                    <h3>Featured Sale</h3>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                </div>
+                <div class="column">
+
+                    <h3>Featured Sale</h3>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                    <a>Link 1</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

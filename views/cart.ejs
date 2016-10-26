@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cart</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <h1>Your Cart items</h1>
+        <p>Your Total is: $<%= cart.total %></p>
+
+        <ul class="cart-list">
+            <% for (var i = 0; i < cart.itemList.length; i++) { %>
+            <li>
+                <div class="item">
+                    <strong>Name:</strong><br><%= cart.itemList [i].name %><br>
+                    <strong>Description:</strong><br><%= cart.itemList [i].description %><br>
+                    <strong>Price:$</strong><%= cart.itemList [i].price %>
+                    <a href="cart/remove/<%= i %>">Remove From Cart</a>
+                </div>
+
+            </li>
+            <% } %>
+        </ul>
+            <p>Your Cart Total Is: $<%= cart.total%></p>
+        <br>
+
+        <button type="submit" onclick="location.href='/clearCart'">Clear Cart</a>
+            <button type="submit" onclick="location.href='/product'">Go Back to Products</a>
+
+
+    </body>
+</html>

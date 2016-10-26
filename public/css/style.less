@@ -1,0 +1,128 @@
+// Create my color pallete.
+@color-01: #ffffff;
+@color-02: #386661;
+@color-03: #38c7b4;
+@color-04: #2da89b;
+@color-05: #386656;
+@max-page-width: 1200px;
+body {
+    background-color: @color-04;
+}
+.page {
+    // border: 1px dotted red;
+    .header {
+        header {
+            // border: 1px dotted green;
+            margin: auto;
+            max-width: @max-page-width;
+        }
+        .navbar {
+            background-color: @color-04;
+        }
+        a {
+            // border: 1px dotted red;
+            border-left: 2px solid @color-01;
+            color: @color-01;
+            display: table-cell;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px 10px 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 10%;
+        }
+        nav {
+            // border: 1px dotted blue;
+            color: @color-01;
+            margin: auto;
+            max-width: @max-page-width;
+            padding: 10px;
+            // Remove the left bar from the first element.
+            a:nth-child(1) {
+                border-left: none;
+            }
+        }
+        // Change menu to stack vertically.
+        @media (max-width: 480px) {
+            a {
+                // border: 2px dotted red;
+                border-left: none;
+                border-top: 1px solid white;
+                display: block;
+                text-align: left;
+                width: 100%;
+            }
+            a:nth-child(0) {
+                border-top: none;
+            }
+        }
+    }
+    .body {
+        background-color: white;
+        margin: auto;
+        .slider {
+            margin: auto;
+            max-width: @max-page-width;
+        }
+    }
+    .grid {
+        margin: auto;
+        max-width: @max-page-width;
+        // border: 1px dotted red;
+        padding: 10px;
+        display: table;
+        width: 100%;
+        .column {
+            border: 1px dotted blue;
+            display: table-cell;
+        }
+        .product {
+            overflow: auto;
+            padding: 20px;
+            > img {
+                // border: 1px dotted purple;
+                width: 50%;
+                float: left;
+            }
+            .description {
+                // border: 1px dotted green;
+                max-width: 50%;
+                float: left;
+                > p {
+                    display: none;
+                }
+                > h3 {
+                    width: 50%;
+                    font-family: "Futura";
+                    text-transform: uppercase;
+                    color: lightgrey;
+                }
+            }
+            a {
+                background-color: @color-04;
+                border-radius: 5px;
+                color: @color-01;
+                display: inline-block;
+                padding: 20px;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .footer {
+        max-width: @max-page-width;
+        margin: auto;
+        color: @color-01;
+        text-transform: uppercase;
+        text-align: center;
+        a {
+            display: block;
+            color: @color-01;
+            text-decoration: none;
+            text-align: center;
+            text-transform: none;
+            font-size: 12px;
+        }
+    }
+}
