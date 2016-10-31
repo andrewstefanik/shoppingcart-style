@@ -4,6 +4,9 @@ const MongoClient = require('mongodb').MongoClient;
 const session = require('express-session');
 
 const app = express();
+/////////
+////
+////
 
 MongoClient.connect('mongodb://webuser:Ducks2014@ds041841.mlab.com:41841/simple_shopping', function(error, database) {
     if(error != null) {
