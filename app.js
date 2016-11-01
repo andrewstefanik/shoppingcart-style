@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const session = require('express-session');
-
+const braintree = require('braintree');
 const app = express();
 /////////
 ////
@@ -205,13 +205,13 @@ app.get('/cart/confirm', function(request, response) {
     response.render('confirmation.ejs')
 
 })
-
-app.get('/cart/pay', function(request, response) {
-    response.render('checkout.ejs')
-})
-app.get('/cart/summary', function(request, response) {
-    response.render('summary.ejs')
-})
+//
+// app.get('/cart/pay', function(request, response) {
+//     response.render('checkout.ejs')
+// })
+// app.get('/cart/summary', function(request, response) {
+//     response.render('summary.ejs')
+// })
 
 
 app.get('/clearCart', function(request, response) {
@@ -310,4 +310,47 @@ function sendEmail (email, callback) {
 
 app.get('/template', function(req, res) {
     res.render('template.ejs');
+});
+
+/// Braintree config
+var gateway = braintree.connect({
+    environment: braintree.Environment.Sandbox,
+    merchantId: "27st6d2tpr55wmmh",
+    publicKey: "wmxpqm846rg5rk9m",
+    privateKey: "bf017347d087f488ea827ff77f147f6e"
+});
+
+app.get('/braintree', function(req, res) {
+    gateway.clientToken.generate({}, function (err, response) {
+        // res.send(response.clientToken);
+        res.render('braintree.ejs', {
+            data: {
+                clientToken: response.clientToken
+            }
+        });
+    });
+});
+
+app.get("/client_token", function(req, res) {
+        gateway.clientToken.generate({}, function(err, response) {
+            res.send(response.clientToken);
+    });
+});
+app.post("/checkout", function(req, res){
+    var nonceFromTheClient = req.body.payment_method_nonce;
+
+    console.log ('data: ', req.body);
+    console.log ('data: ', nonceFromTheClient);
+
+    // Use payment method nonce here
+    gateway.transaction.sale({
+        amount: "10.00",
+        paymentMethodNonce: nonceFromTheClient,
+        options: {
+            submitForSettlement: true
+        }
+    }, function(err, result) {
+        console.log ('error: ', err);
+        console.log ('result: ', result);
+    });
 });

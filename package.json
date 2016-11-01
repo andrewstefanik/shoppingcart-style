@@ -11,6 +11,7 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
+    "braintree": "^1.42.0",
     "connect-flash": "^0.1.1",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
